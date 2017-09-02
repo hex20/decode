@@ -3,30 +3,65 @@ var yargs       = require('yargs');
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var rimraf      = require('rimraf');
+var uglify      = require('gulp-uglify-cli');
+var neat        = require('node-neat').includePaths;
 
 // Load all Gulp plugins into one variable
 var $ = plugins();
 
 var PRODUCTION = !!(yargs.argv.production);
 
-gulp.task('default', ['browser-sync', 'sass']);
+gulp.task('build', ['clean', 'sass',  'images', 'html', 'js']);
 
-// Static server
-gulp.task('browser-sync', function() {
+gulp.task('default', ['build'], function() {
   browserSync.init({
-    server: {
-        baseDir: "./"
-    }
+    server: './dist', port: 8080
   });
+
+  gulp.watch("src/styles/scss/**/*", ['sass']);
+  gulp.watch("src/js/*.js", ['js']);
+  gulp.watch("src/images/*", ['images']);
+  gulp.watch("src/*.html", ['html']);
 });
 
+// Delete the contents of the 'dist' folder
+gulp.task('clean', function(done) {
+  rimraf('dist/*.*', done);
+});
+
+// Compile scss and copy to dist
 gulp.task('sass', function() {
-  return gulp.src("styles/scss/*.scss")
+  return gulp.src("src/styles/scss/*.scss")
     .pipe($.sourcemaps.init())
-    .pipe(sass())
-    .pipe($.autoprefixer({browsers: COMPATIBILITY}))
+    .pipe(sass({
+      includePaths: ['sass'].concat(neat)
+    }))
+    .pipe($.autoprefixer())
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest("styles/"))
+    .pipe(gulp.dest("dist/styles/"))
     .pipe(browserSync.stream());
+});
+
+// Copy images to dist folder and minify if production
+gulp.task('images', function() {
+  return gulp.src('src/images/*')
+  .pipe($.if(PRODUCTION, $.imagemin({
+    progressive: true
+  })))
+  .pipe(gulp.dest('dist/images'));
+})
+
+// Copy HTML file to dist folder
+gulp.task('html', function() {
+  return gulp.src('src/index.html')
+  .pipe(gulp.dest('dist'));
+});
+
+// Copy js to dist and minify if production
+gulp.task('js', function() {
+  return gulp.src('dist/js/*')
+  .pipe($.if(PRODUCTION, uglify()))
+  .pipe(gulp.dest('dist/js'));
 });
