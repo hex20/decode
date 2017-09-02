@@ -1,0 +1,25 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "It's Magic",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --production"
+  },
+  "author": "Angus McKay",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^2.0.0-beta.0",
+    "yargs": "^8.0.2"
+  }
+}
