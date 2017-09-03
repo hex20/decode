@@ -1,0 +1,32 @@
+.pro-sidebar {
+  @include size(7.813em 100%);
+  background-color: $pro-purple;
+  position: fixed;
+
+  &__list {
+    @include margin(2.813em 0 0 0);
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__list-item {
+    margin-bottom: 2.5em;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $pro-white;
+  }
+
+  &__icon {
+    margin-bottom: 1.125em;
+    margin-right: auto;
+    margin-left: auto;
+
+    &--placeholder {
+      @include size(1.875em);
+      background-color: $pro-white;
+    }
+  }
+}
