@@ -1,0 +1,6 @@
+@mixin svg-color($color) {
+  path,
+  circle {
+    stroke: $color;
+  }
+}

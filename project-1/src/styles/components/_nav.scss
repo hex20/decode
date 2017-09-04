@@ -1,4 +1,47 @@
+$nav-grid: (
+  columns: 2,
+  gutter: 0,
+);
+
+$nav-height: 6.250em;
+
 .pro-nav {
   background-color: $pro-white;
-  @include size(100% 6.250em);
+  @include size(100% $nav-height);
+  @include padding(0 3.125em);
+  box-sizing: border-box;
+  @include grid-container;
+  margin-bottom: 1.563em;
+
+  &__grid-column {
+    @include grid-column(1, $nav-grid);
+    height: $nav-height;
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__menu-icon {
+    display: inline-block;
+    margin-top: 36px;
+    float: left;
+    line-height: 0;
+    margin-right: 50px;
+  }
+
+  &__logo {
+    display: inline-block;
+    line-height: 0;
+    margin-top: 25px;
+  }
+
+  &__username {
+    line-height: $nav-height;
+  }
+
+  &__logo-round {
+    margin-right: 10px;
+    display: inline-block;
+  }
 }

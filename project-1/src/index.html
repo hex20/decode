@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>DCODE Project-1</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,15 +11,20 @@
   </head>
   <body>
     <nav class="pro-nav">
-      <div>
-        <div>
+      <div class="pro-nav__grid-column pro-nav__grid-column--left">
+        <div class="pro-nav__menu-icon">
           <img src="/dist/images/svg/menu.svg" class="icon">   
         </div>
-        <img src="/dist/images/svg/logo.svg" class="icon">
+        <div class="pro-nav__logo">
+          <img src="/dist/images/svg/logo.svg" class="icon">
+        </div>
       </div>
-      <div>
-        <img src="/dist/images/svg/logo-round.svg" class="icon">
-        <span>User Name</span>
+      <div class="pro-nav__grid-column pro-nav__grid-column--right">
+        <div class="pro-nav__logo-round">
+            <img src="/dist/images/svg/logo-round.svg" class="icon">
+        </div>
+        <span class="pro-nav__username">User Name</span>
+        <img src="/dist/images/svg/chevron-down.svg" class="icon">
       </div>
     </nav>
     <aside class="pro-sidebar">
@@ -74,18 +79,22 @@
           <span>Today</span>
         </div>
       </div>
-      <div class="pro-content__header">
-        <div>
-          <div></div>
-          <h2>John Smith</h2>
-          <h4>Department Title Heading</h4>
+      <div class="pro-content__wrapper">
+        <div class="pro-content__header">
+          <div>
+            <div class="pro-content__header-icon">
+                <img src="/dist/images/svg/logo-round.svg" class="icon">
+            </div>
+            <h2>John Smith</h2>
+            <h4>Department Title Heading</h4>
+          </div>
+          <div>
+            <input class="" placeholder="Search by Task Title" type="text" />
+          </div>
         </div>
-        <div>
-          <input class="" placeholder="Search by Task Title" type="text" />
-        </div>
-      </div>
-      <div class="pro-content__tasks">
+        <div class="pro-content__tasks">
 
+        </div>
       </div>
     </main>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

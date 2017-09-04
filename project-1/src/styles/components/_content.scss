@@ -1,3 +1,23 @@
 .pro-content {
-  background-color: $pro-white;
+  @include margin(1.250em 1.250em 1.250em 9.063em);
+
+  &__tab {
+    @include size(7.813em 3.125em);
+    line-height: 3.125em;
+    background-color: $pro-white;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    margin-right: 0.125em;
+  }
+
+  &__header {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__wrapper {
+    background-color: $pro-white;
+    @include padding(0 1.875em);
+  }
 }

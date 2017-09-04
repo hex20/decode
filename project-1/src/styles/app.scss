@@ -6,6 +6,9 @@
 @import "bourbon";
 @import "neat";
 
+//Custom Mixins
+@import 'custom-mixins';
+
 @import "components/nav";
 @import "components/sidebar";
 @import "components/content";
