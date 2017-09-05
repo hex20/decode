@@ -1,14 +1,24 @@
+//CSS reset
+@import "normalize";
+
+// Project SASS settings and variables
 @import "settings";
 
+// Page Typography Import
+@import "typography";
+
+// html page layout
 @import "layout";
 
-@import "normalize";
+// Bourbon and neat imports http://bourbon.io/
 @import "bourbon";
 @import "neat";
 
 //Custom Mixins
 @import 'custom-mixins';
 
+// Custom Project Components
 @import "components/nav";
 @import "components/sidebar";
 @import "components/content";
+@import "components/task";

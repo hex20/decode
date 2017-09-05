@@ -10,96 +10,187 @@
     <link rel="stylesheet" href="styles/app.css">
   </head>
   <body>
-    <nav class="pro-nav">
-      <div class="pro-nav__grid-column pro-nav__grid-column--left">
-        <div class="pro-nav__menu-icon">
-          <img src="/dist/images/svg/menu.svg" class="icon">   
+    <div class="pro-page-wrapper">
+      <nav class="pro-nav">
+        <div class="pro-nav__grid-column pro-nav__grid-column--left">
+          <div class="pro-nav__menu-icon">
+            <img src="/dist/images/svg/menu.svg">   
+          </div>
+          <div class="pro-nav__logo">
+            <img src="/dist/images/svg/logo.svg">
+          </div>
         </div>
-        <div class="pro-nav__logo">
-          <img src="/dist/images/svg/logo.svg" class="icon">
+        <div class="pro-nav__grid-column pro-nav__grid-column--right">
+          <div class="pro-nav__logo-round">
+              <img src="/dist/images/svg/logo-round.svg" class="icon">
+          </div>
+          <span class="pro-nav__username">User Name</span>
+          <img src="/dist/images/svg/chevron-down.svg" class="icon">
         </div>
-      </div>
-      <div class="pro-nav__grid-column pro-nav__grid-column--right">
-        <div class="pro-nav__logo-round">
-            <img src="/dist/images/svg/logo-round.svg" class="icon">
+      </nav>
+      <aside class="pro-sidebar">
+        <ul class="pro-sidebar__list">
+          <li class="pro-sidebar__list-item pro-sidebar__list-item--selected">
+            <a href="#" class="pro-sidebar__link">
+              <div class="pro-sidebar__icon">
+                  <img src="/dist/images/svg/calendar.svg">
+              </div>
+              <span class="pro-sidebar__item-title">Schdule</span>
+            </a>
+          </li>
+          <li class="pro-sidebar__list-item">
+            <a href="#" class="pro-sidebar__link">
+              <div class="pro-sidebar__icon">
+                  <img src="/dist/images/svg/file-text.svg">
+              </div>
+              <span class="pro-sidebar__item-title">Projects</span>
+            </a>
+          </li>
+          <li class="pro-sidebar__list-item">
+            <a href="#" class="pro-sidebar__link">
+              <div class="pro-sidebar__icon">
+                  <img src="/dist/images/svg/bar-chart-2.svg">
+              </div>
+              <span class="pro-sidebar__item-title">Tasks</span>
+            </a>
+          </li>
+          <li class="pro-sidebar__list-item">
+            <a href="#" class="pro-sidebar__link">
+              <div class="pro-sidebar__icon">
+                  <img src="/dist/images/svg/users.svg">
+              </div>
+              <span class="pro-sidebar__item-title">Users</span>
+            </a>
+          </li>
+          <li class="pro-sidebar__list-item">
+            <a href="#" class="pro-sidebar__link">
+              <div class="pro-sidebar__icon">
+                  <img src="/dist/images/svg/settings.svg">
+              </div>
+              <span class="pro-sidebar__item-title">Settings</span>
+            </a>
+          </li>
+          <li class="pro-sidebar__list-item">
+            <a href="#" class="pro-sidebar__link">
+              <div class="pro-sidebar__icon">
+                  <img src="/dist/images/svg/search.svg">
+              </div>
+              <span class="pro-sidebar__item-title">Search</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <main class="pro-content">
+        <div class="pro-content__tabs">
+          <div class="pro-content__tab">
+            <span>Team</span>
+          </div>
+          <div class="pro-content__tab pro-content__tab--selected">
+            <span>Tasks</span>
+          </div>
+          <div class="pro-content__tab">
+            <span>Today</span>
+          </div>
         </div>
-        <span class="pro-nav__username">User Name</span>
-        <img src="/dist/images/svg/chevron-down.svg" class="icon">
-      </div>
-    </nav>
-    <aside class="pro-sidebar">
-      <ul class="pro-sidebar__list">
-        <li class="pro-sidebar__list-item pro-sidebar__list-item--selected">
-          <a href="#" class="pro-sidebar__link">
-            <div class="pro-sidebar__icon pro-sidebar__icon--placeholder"></div>
-            <span class="pro-sidebar__item-title">Schdule</span>
-          </a>
-        </li>
-        <li class="pro-sidebar__list-item">
-          <a href="#" class="pro-sidebar__link">
-            <div class="pro-sidebar__icon pro-sidebar__icon--placeholder"></div>
-            <span class="pro-sidebar__item-title">Schdule</span>
-          </a>
-        </li>
-        <li class="pro-sidebar__list-item">
-          <a href="#" class="pro-sidebar__link">
-            <div class="pro-sidebar__icon pro-sidebar__icon--placeholder"></div>
-            <span class="pro-sidebar__item-title">Schdule</span>
-          </a>
-        </li>
-        <li class="pro-sidebar__list-item">
-          <a href="#" class="pro-sidebar__link">
-            <div class="pro-sidebar__icon pro-sidebar__icon--placeholder"></div>
-            <span class="pro-sidebar__item-title">Schdule</span>
-          </a>
-        </li>
-        <li class="pro-sidebar__list-item">
-          <a href="#" class="pro-sidebar__link">
-            <div class="pro-sidebar__icon pro-sidebar__icon--placeholder"></div>
-            <span class="pro-sidebar__item-title">Schdule</span>
-          </a>
-        </li>
-        <li class="pro-sidebar__list-item">
-          <a href="#" class="pro-sidebar__link">
-            <div class="pro-sidebar__icon pro-sidebar__icon--placeholder"></div>
-            <span class="pro-sidebar__item-title">Schdule</span>
-          </a>
-        </li>
-      </ul>
-    </aside>
-    <main class="pro-content">
-      <div class="pro-content__tabs">
-        <div class="pro-content__tab">
-          <span>Team</span>
-        </div>
-        <div class="pro-content__tab">
-          <span>Tasks</span>
-        </div>
-        <div class="pro-content__tab">
-          <span>Today</span>
-        </div>
-      </div>
-      <div class="pro-content__wrapper">
-        <div class="pro-content__header">
-          <div>
-            <div class="pro-content__header-icon">
-                <img src="/dist/images/svg/logo-round.svg" class="icon">
+        <div class="pro-content__wrapper">
+          <div class="pro-content__header">
+            <div>
+              <div class="pro-content__header-icon">
+                  <img src="/dist/images/svg/logo-round.svg" class="icon">
+              </div>
+              <h2 class="pro-content__username">John Smith</h2>
+              <h4 class="pro-content__sub-heading">Department Title Heading</h4>
             </div>
-            <h2>John Smith</h2>
-            <h4>Department Title Heading</h4>
+            <div class="pro-content__search">
+              <img src="/dist/images/svg/search.svg" class="pro-content__search-icon">   
+              <input class="pro-content__search-input" placeholder="Search by Task Title" type="text" />
+            </div>
           </div>
-          <div>
-            <input class="" placeholder="Search by Task Title" type="text" />
+          <div class="pro-task">
+            <div class="pro-task__column">
+              <div class="pro-task__wrapper">
+                <span class="pro-task__label">To do</span>
+                <span class="pro-task__number">6 Tasks</span>
+                <div class="pro-task__bar"></div>
+                <ul class="pro-task__tasks">
+                  <li class="pro-task__item pro-task__item--overdue">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <p class="pro-task__title">WWBWS H1234</p>
+                    <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                  </li>
+                  <li class="pro-task__item pro-task__item--overdue">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <p class="pro-task__title">WWBWS H1234</p>
+                    <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                  </li>
+                  <li class="pro-task__item">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <p class="pro-task__title">WWBWS H1234</p>
+                    <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                  </li>
+                  <li class="pro-task__item">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <p class="pro-task__title">WWBWS H1234</p>
+                    <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-task__column">
+              <div class="pro-task__wrapper">
+                <span class="pro-task__label">To do</span>
+                <span class="pro-task__number">6 Tasks</span>
+                <div class="pro-task__bar"></div>
+                  <ul class="pro-task__tasks">
+                    <li class="pro-task__item">
+                      <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                      <p class="pro-task__title">WWBWS H1234</p>
+                      <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                    </li>
+                    <li class="pro-task__item">
+                      <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                      <p class="pro-task__title">WWBWS H1234</p>
+                      <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                    </li>
+                    <li class="pro-task__item">
+                      <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                      <p class="pro-task__title">WWBWS H1234</p>
+                      <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                    </li>
+                    <li class="pro-task__item">
+                      <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                      <p class="pro-task__title">WWBWS H1234</p>
+                      <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div class="pro-task__column">
+              <div class="pro-task__wrapper">
+                <span class="pro-task__label">To do</span>
+                <span class="pro-task__number">6 Tasks</span>
+                <div class="pro-task__bar"></div>
+                <ul class="pro-task__tasks">
+                  <li class="pro-task__item pro-task__item--done">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <p class="pro-task__title">WWBWS H1234</p>
+                    <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                  </li>
+                  <li class="pro-task__item pro-task__item--done">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <p class="pro-task__title">WWBWS H1234</p>
+                    <p class="pro-task__date">Due: 11 july 2017 Overdue</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="pro-content__tasks">
-
-        </div>
-      </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+      </main>
+      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+    </div>
   </body>
 </html>

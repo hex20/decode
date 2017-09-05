@@ -13,6 +13,13 @@
 
   &__list-item {
     margin-bottom: 2.5em;
+    opacity: 0.7;
+    cursor: pointer;
+
+    &--selected,
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__link {
@@ -25,9 +32,9 @@
     margin-right: auto;
     margin-left: auto;
 
-    &--placeholder {
+    svg {
       @include size(1.875em);
-      background-color: $pro-white;
+      @include svg-color($pro-white);
     }
   }
 }

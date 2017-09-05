@@ -11,7 +11,7 @@ $nav-height: 6.250em;
   @include padding(0 3.125em);
   box-sizing: border-box;
   @include grid-container;
-  margin-bottom: 1.563em;
+  // margin-bottom: 1.563em;
 
   &__grid-column {
     @include grid-column(1, $nav-grid);

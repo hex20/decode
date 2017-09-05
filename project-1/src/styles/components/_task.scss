@@ -1,0 +1,55 @@
+.pro-task {
+  &__column {
+    float: left;
+    margin-right: 1.250em;
+
+    &:first-of-type {
+      margin-left: 0
+    }
+  }
+
+  &__bar {
+    height: 5px;
+    background-color: $pro-purple;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 15px;
+  }
+
+  &__tasks {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__number {
+    float: right;
+  }
+
+  &__heading,
+  &__title,
+  &__date {
+    margin: 0;
+  }
+
+  &__item {
+    @include size(16.56em 5em);
+    border: 1px #DDDEE0 solid;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    display: block;
+    color: $pro-black;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--overdue {
+      border-left: 2px $pro-orange solid;
+    }
+
+    &--done {
+      border-left: 2px $pro-green solid;
+    }
+  }
+}

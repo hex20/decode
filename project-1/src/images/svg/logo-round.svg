@@ -1,18 +1,22 @@
-<svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <circle id="a" cx="11" cy="14" r="4"/>
-    <path id="b" d="M0 0h3v14l-3-1.75z"/>
-  </defs>
-  <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
-    <path fill="#131A37" d="M17 10h14v20H17z"/>
-    <g transform="translate(10 10)">
-      <use fill="#131A37" xlink:href="#a"/>
-      <circle stroke="#FFF" stroke-width="3.5" cx="11" cy="14" r="5.75"/>
+
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="21" cy="24" r="4"></circle>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-109.000000, -113.000000)">
+            <g id="logo-round" transform="translate(110.000000, 114.000000)">
+                <g id="Group-7">
+                    <rect id="Rectangle" fill="#131A37" x="17" y="10" width="14" height="20"></rect>
+                    <g id="Oval">
+                        <circle stroke="#FFFFFF" stroke-width="3.5" cx="21" cy="24" r="5.75"></circle>
+                    </g>
+                    <polygon id="Rectangle-2" fill="#131A37" points="10 10 13 10 13 24 10 22.25"></polygon>
+                    <circle id="Oval-2" stroke="#131A37" cx="20" cy="20" r="20"></circle>
+                </g>
+            </g>
+        </g>
     </g>
-    <g transform="translate(10 10)">
-      <use fill="#131A37" xlink:href="#b"/>
-      <path stroke="#131A37" d="M.5.5v11.463l2 1.166V.5h-2z"/>
-    </g>
-    <circle stroke="#131A37" cx="20" cy="20" r="20"/>
-  </g>
 </svg>

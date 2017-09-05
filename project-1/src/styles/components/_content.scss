@@ -1,5 +1,9 @@
+$input-gray: #EDEDF1;
+
 .pro-content {
   @include margin(1.250em 1.250em 1.250em 9.063em);
+  flex: 1 1 auto;
+  background-color: $pro-white;
 
   &__tab {
     @include size(7.813em 3.125em);
@@ -9,6 +13,19 @@
     text-align: center;
     border-radius: 5px 5px 0 0;
     margin-right: 0.125em;
+    cursor: pointer;
+
+    span {
+      opacity: 0.5;
+    }
+
+    &--selected span {
+      opacity: 1;
+    }
+  }
+
+  &__tabs {
+    background-color: $pro-light-gray;
   }
 
   &__header {
@@ -16,8 +33,62 @@
     width: 100%;
   }
 
+  &__header-icon {
+    float: left;
+    margin-right: 1.563em;
+
+    svg {
+      @include size(3.250em);
+    }
+  }
+
+  &__username,
+  &__sub-heading {
+    text-transform: capitalize;
+  }
+
+  &__username {
+    font-size: 0.9em;
+    margin: 0.62em 0;
+    display: inline-block;
+  }
+
+  &__sub-heading {
+    margin: 0;    
+    font-size: 0.7em;
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__search-input {
+    width: 30em;
+    float: right;
+    height: 3.125em;
+    border-radius: 5px;
+    border: 1px #DDDEE0 solid;
+    padding-left: 3.125em;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $input-gray;
+      font-size: 0.875em;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__search-icon {
+    @include position(absolute, 1.063em null null 0.938em); 
+    @include svg-color($input-gray);
+    @include size(1em);
+  }
+
   &__wrapper {
     background-color: $pro-white;
-    @include padding(0 1.875em);
+    @include padding(2.18em 1.87em 0 1.87em);
   }
 }
