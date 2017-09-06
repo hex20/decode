@@ -4,9 +4,6 @@
 // Project SASS settings and variables
 @import "settings";
 
-// Page Typography Import
-@import "typography";
-
 // html page layout
 @import "layout";
 
@@ -16,6 +13,9 @@
 
 //Custom Mixins
 @import 'custom-mixins';
+
+// Page Typography Import
+@import "typography";
 
 // Custom Project Components
 @import "components/nav";

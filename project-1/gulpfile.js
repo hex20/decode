@@ -16,7 +16,7 @@ var $ = plugins();
 
 var PRODUCTION = !!(yargs.argv.production);
 
-gulp.task('build', ['clean', 'sass',  'images', 'html', 'js']);
+gulp.task('build', ['clean', 'sass',  'images', 'html', 'js', 'fonts']);
 
 gulp.task('default', ['build'], function() {
   browserSync.init({
@@ -27,6 +27,7 @@ gulp.task('default', ['build'], function() {
   gulp.watch("src/js/*.js", ['js']);
   gulp.watch("src/images/**/*", ['images']);
   gulp.watch("src/*.html", ['html']);
+  gulp.watch("src/fonts/**", ['fonts']);
 });
 
 // Delete the contents of the 'dist' folder
@@ -70,4 +71,10 @@ gulp.task('js', function() {
     .on('error', function(e) {console.log(e);})
   ))
   .pipe(gulp.dest('dist/js'));
+});
+
+// Copy fonts to dist folder
+gulp.task('fonts', function() {
+  return gulp.src('src/fonts/**/')
+  .pipe(gulp.dest('dist/fonts/'));
 });
