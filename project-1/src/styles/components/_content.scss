@@ -31,11 +31,13 @@ $input-gray: #EDEDF1;
   &__header {
     display: inline-block;
     width: 100%;
+    margin-bottom: 2.5em;
   }
 
   &__header-icon {
     float: left;
     margin-right: 1.563em;
+    @include size(3.250em);
 
     svg {
       @include size(3.250em);
@@ -62,6 +64,12 @@ $input-gray: #EDEDF1;
 
   &__search {
     position: relative;
+    float: right
+  }
+
+  &__info {
+    float: left;
+    min-width: 25em;
   }
 
   &__search-input {

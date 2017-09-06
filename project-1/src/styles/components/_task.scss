@@ -9,11 +9,10 @@
   }
 
   &__bar {
-    height: 5px;
+    height: 0.313em;
     background-color: $pro-purple;
     width: 100%;
-    margin-bottom: 25px;
-    margin-top: 15px;
+    @include margin(0.438em null 1.563em null);
 
     &--blue {
       background-color: $pro-light-blue;
@@ -33,17 +32,44 @@
     float: right;
   }
 
+  &__number,
+  &__label {
+    font-size: 0.813em;
+  }
+
   &__heading,
   &__title,
   &__date {
     margin: 0;
   }
 
+  &__heading {
+    font-size: 0.813em;
+    font-family: $pro-font-light;
+    margin-bottom: 0.625em;
+    display: block !important;
+    @include ellipsis;
+  }
+
+  &__title {
+    margin-bottom: 0.313em;
+  }
+
+  &__title,
+  &__date {
+    font-size: 0.625em;
+    color: tint($pro-black, 50%);
+
+    &--value {
+      color: $pro-purple;
+    }
+  }
+
   &__item {
     @include size(16.56em 5em);
     border: 1px #DDDEE0 solid;
-    margin-bottom: 10px;
-    padding-left: 15px;
+    margin-bottom: 0.625em;
+    @include padding(0.625em 0.938em null 0.938em);
     box-sizing: border-box;
     display: block;
     color: $pro-black;
@@ -54,6 +80,10 @@
 
     &--overdue {
       border-left: 2px $pro-orange solid;
+
+      .pro-task__date--value {
+        color: $pro-orange;
+      }
     }
 
     &--done {
@@ -64,18 +94,45 @@
       background-color: $pro-orange;
       border-color: $pro-orange;
       color: $pro-white;
+
+      .pro-task__date,
+      .pro-task__title {
+        color: $pro-white;
+
+        &--value {
+          color: $pro-white;
+        }
+      }
     }
 
     &--red {
       background-color: $pro-red;
       border-color: $pro-red;
       color: $pro-white;
+
+      .pro-task__date,
+      .pro-task__title {
+        color: $pro-white;
+
+        &--value {
+          color: $pro-white;
+        }
+      }
     }
 
     &--green {
       background-color: $pro-green;
       border-color: $pro-green;
       color: $pro-white;
+
+      .pro-task__date,
+      .pro-task__title {
+        color: $pro-white;
+
+        &--value {
+          color: $pro-white;
+        }
+      }
     }
   }
 }

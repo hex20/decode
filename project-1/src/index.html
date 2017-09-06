@@ -6,7 +6,6 @@
     <title>DCODE Project-1</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="styles/app.css">
   </head>
   <body>
@@ -24,8 +23,12 @@
           <div class="pro-nav__logo-round">
               <img src="/dist/images/svg/logo-round.svg" class="icon">
           </div>
-          <span class="pro-nav__username">User Name</span>
-          <img src="/dist/images/svg/chevron-down.svg" class="icon">
+          <div class="pro-nav__dropdown-trigger">
+              <span class="pro-nav__username">User Name</span>
+              <div  class="pro-nav__dropdown-arrow">
+                  <img src="/dist/images/svg/chevron-down.svg" class="icon">
+              </div>
+          </div>
         </div>
       </nav>
       <aside class="pro-sidebar">
@@ -94,7 +97,7 @@
         </div>
         <div class="pro-content__wrapper">
           <div class="pro-content__header">
-            <div>
+            <div class="pro-content__info">
               <div class="pro-content__header-icon">
                   <img src="/dist/images/svg/logo-round.svg" class="icon">
               </div>
@@ -113,25 +116,35 @@
                 <span class="pro-task__number">6 Tasks</span>
                 <div class="pro-task__bar pro-task__bar--blue"></div>
                 <ul class="pro-task__tasks">
-                  <li class="pro-task__item pro-task__item--overdue pro-task__item--orange">
-                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                  <li class="pro-task__item pro-task__item--orange">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234 Metal</h4>
                     <p class="pro-task__title">Title: <span class="pro-task__title--value">H1234</span></p>
                     <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017 Overdue</span></p>
                   </li>
                   <li class="pro-task__item pro-task__item--overdue">
-                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234 Metal</h4>
+                    <p class="pro-task__title">Title: <span class="pro-task__title--value">H1234</span></p>
+                    <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017 Overdue</span></p>
+                  </li>
+                  <li class="pro-task__item pro-task__item--overdue">
+                    <h4 class="pro-task__heading">On Hold: Woolworths H1234 Metal</h4>
                     <p class="pro-task__title">Title: <span class="pro-task__title--value">H1234</span></p>
                     <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017 Overdue</span></p>
                   </li>
                   <li class="pro-task__item">
-                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <h4 class="pro-task__heading">Woolworths H1234 Metal</h4>
                     <p class="pro-task__title">Title: <span class="pro-task__title--value">H1234</span></p>
-                    <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017 Overdue</span></p>
+                    <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017</span></p>
                   </li>
                   <li class="pro-task__item">
-                    <h4 class="pro-task__heading">On Hold: Woolworths H1234...</h4>
+                    <h4 class="pro-task__heading">Woolworths H1234 Metal</h4>
                     <p class="pro-task__title">Title: <span class="pro-task__title--value">H1234</span></p>
-                    <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017 Overdue</span></p>
+                    <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017</span></p>
+                  </li>
+                  <li class="pro-task__item">
+                    <h4 class="pro-task__heading">Woolworths H1234 Metal</h4>
+                    <p class="pro-task__title">Title: <span class="pro-task__title--value">H1234</span></p>
+                    <p class="pro-task__date">Due: <span class="pro-task__date--value">11 july 2017</span></p>
                   </li>
                 </ul>
               </div>
@@ -187,9 +200,8 @@
           </div>
         </div>
       </main>
-      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-      <script src="js/plugins.js"></script>
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../node_modules/dragula/dist/dragula.min.js"></script>
       <script src="js/main.js"></script>
     </div>
   </body>

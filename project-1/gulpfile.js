@@ -10,13 +10,14 @@ var bourbon     = require('node-bourbon').includePaths;
 var normalize   = require('node-normalize-scss').includePaths;
 var svgInject   = require('gulp-svg-inject');
 var svgmin      = require('gulp-svgmin');
+var _           = require('lodash');
 
 // Load all Gulp plugins into one variable
 var $ = plugins();
 
 var PRODUCTION = !!(yargs.argv.production);
 
-gulp.task('build', ['clean', 'sass',  'images', 'html', 'js', 'fonts']);
+gulp.task('build', ['clean', 'images', 'sass', 'js', 'fonts', 'vendorCopy', 'html']);
 
 gulp.task('default', ['build'], function() {
   browserSync.init({
@@ -32,7 +33,7 @@ gulp.task('default', ['build'], function() {
 
 // Delete the contents of the 'dist' folder
 gulp.task('clean', function(done) {
-  rimraf('dist/*.*', done);
+  rimraf('./dist', done);
 });
 
 // Compile scss and copy to dist
@@ -66,11 +67,25 @@ gulp.task('html', function() {
 
 // Copy js to dist and minify if production
 gulp.task('js', function() {
-  return gulp.src('dist/js/*')
+  return gulp.src('src/js/*')
   .pipe($.if(PRODUCTION, uglify()
     .on('error', function(e) {console.log(e);})
   ))
   .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('vendorCopy', function() {
+  var assets = {
+    js: [
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/dragula/dist/dragula.min.js'
+    ],
+    styles: ['./node_modules/dragula/dist/dragula.min.css']
+  };
+
+  _(assets).forEach(function (assets, type) {
+    gulp.src(assets).pipe(gulp.dest('./dist/' + type + '/lib/'));
+  });
 });
 
 // Copy fonts to dist folder

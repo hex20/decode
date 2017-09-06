@@ -24,16 +24,27 @@ $nav-height: 6.250em;
 
   &__menu-icon {
     display: inline-block;
-    margin-top: 36px;
+    margin-top: ($nav-height - 1.25em) / 2;
     float: left;
     line-height: 0;
-    margin-right: 50px;
+    margin-right: 3.125em;
+  }
+
+  &__dropdown-trigger {
+    float: right;
+  }
+
+  &__dropdown-arrow {
+    float: right;
+    margin-left: 1.25em;
+    margin-top: ($nav-height - 1.5em) / 2;
+    @include size(1.5em);
   }
 
   &__logo {
     display: inline-block;
     line-height: 0;
-    margin-top: 25px;
+    margin-top: ($nav-height - 3.063em) / 2;
   }
 
   &__username {
@@ -41,7 +52,12 @@ $nav-height: 6.250em;
   }
 
   &__logo-round {
-    margin-right: 10px;
+    margin-top: ($nav-height - 2.625em) / 2;
+    margin-right: 0.625em;
     display: inline-block;
+
+    svg {
+      display: block;
+    }
   }
 }
