@@ -1,8 +1,14 @@
 .pro-sidebar {
-  @include size(7.813em 100%);
+  min-width: 7.813em;
+  height: calc(100vh - 100px);
   background-color: $pro-purple;
-  position: fixed;
-  top: 6.25em;
+  transition: .3s;
+  margin-left: 0;
+  order: -1;
+
+  &--closed {
+    margin-left: -7.813em;
+  }
 
   &__list {
     @include margin(2.813em 0 0 0);

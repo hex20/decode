@@ -1,9 +1,16 @@
 $input-gray: #EDEDF1;
 
+$heading-grid: (
+  columns: 2,
+  gutter: 0,
+);
+
 .pro-content {
-  @include margin(1.250em 1.250em 1.250em 9.063em);
+  //1.250em 1.250em 9.063em
+  @include margin(1.250em);
   flex: 1 1 auto;
   background-color: $pro-white;
+  transition: .3s;
 
   &__tab {
     @include size(7.813em 3.125em);
@@ -32,6 +39,7 @@ $input-gray: #EDEDF1;
     display: inline-block;
     width: 100%;
     margin-bottom: 2.5em;
+    @include grid-container;
   }
 
   &__header-icon {
@@ -62,19 +70,16 @@ $input-gray: #EDEDF1;
     font-family: $pro-font-light;
   }
 
-  &__search {
-    position: relative;
-    float: right
+  &__grid-column {
+    @include grid-column(1, $heading-grid);
   }
 
-  &__info {
-    float: left;
-    min-width: 25em;
+  &__search {
+    text-align: right;
   }
 
   &__search-input {
     width: 30em;
-    float: right;
     height: 3.125em;
     border-radius: 5px;
     border: 1px #DDDEE0 solid;
@@ -92,13 +97,15 @@ $input-gray: #EDEDF1;
   }
 
   &__search-icon {
-    @include position(absolute, 1.063em null null 0.938em); 
+    @include position(absolute); 
     @include svg-color($input-gray);
+    margin-top: 1.063em;
+    margin-left: 1.063em;
     @include size(1em);
   }
 
   &__wrapper {
     background-color: $pro-white;
-    @include padding(2.18em 1.87em 0 1.87em);
+    @include padding(2.18em 1.87em);
   }
 }

@@ -1,7 +1,11 @@
 .pro-task {
+  display: inline-block;
+  width: 100%;
+
   &__column {
     float: left;
     margin-right: 1.250em;
+    min-width: 16.56em;
 
     &:first-of-type {
       margin-left: 0
@@ -26,6 +30,7 @@
   &__tasks {
     margin: 0;
     padding: 0;
+    min-height: 500px; //Placeholder for testing
   }
 
   &__number {
@@ -66,13 +71,14 @@
   }
 
   &__item {
-    @include size(16.56em 5em);
+    @include size(100% 5em);
     border: 1px #DDDEE0 solid;
     margin-bottom: 0.625em;
     @include padding(0.625em 0.938em null 0.938em);
     box-sizing: border-box;
     display: block;
     color: $pro-black;
+    cursor: pointer;
 
     &:last-of-type {
       margin-bottom: 0;
