@@ -10,6 +10,7 @@ var bourbon     = require('node-bourbon').includePaths;
 var normalize   = require('node-normalize-scss').includePaths;
 var svgInject   = require('gulp-svg-inject');
 var svgmin      = require('gulp-svgmin');
+var runSequence = require('run-sequence');
 var _           = require('lodash');
 
 // Load all Gulp plugins into one variable
@@ -17,9 +18,11 @@ var $ = plugins();
 
 var PRODUCTION = !!(yargs.argv.production);
 
-gulp.task('build', ['clean', 'images', 'sass', 'js', 'fonts', 'vendorCopy', 'html']);
+gulp.task('build', function() {
+  runSequence('clean', 'images', ['sass', 'js', 'fonts', 'vendorCopy'], 'html', 'server')
+});
 
-gulp.task('default', ['build'], function() {
+gulp.task('server', function() {
   browserSync.init({
     server: './dist', port: 8080
   });
@@ -53,7 +56,7 @@ gulp.task('sass', function() {
 
 // Copy images to dist folder and minify if production
 gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
+  return gulp.src('src/images/**/*.*')
   .pipe(svgmin())
   .pipe(gulp.dest('dist/images/'));
 })
