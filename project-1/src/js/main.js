@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function($) {
 
     var tasksColumns = $('.pro-task__tasks').get();
 

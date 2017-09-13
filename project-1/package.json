@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "It's Magic",
   "main": "gulpfile.js",
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp --production"
-  },
   "author": "Angus McKay",
   "license": "MIT",
   "dependencies": {
@@ -21,7 +17,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-svg-inject": "^1.0.0",
     "gulp-svgmin": "^1.2.4",
-    "gulp-uglify-cli": "^0.1.7",
+    "gulp-uglify": "^3.0.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "node-bourbon": "^4.2.8",
