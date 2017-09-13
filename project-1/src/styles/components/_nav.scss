@@ -50,6 +50,7 @@ $nav-height: 6.250em;
 
   &__username {
     line-height: $nav-height;
+    user-select: none;
   }
 
   &__logo-round {

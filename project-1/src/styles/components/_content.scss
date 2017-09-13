@@ -6,7 +6,6 @@ $heading-grid: (
 );
 
 .pro-content {
-  //1.250em 1.250em 9.063em
   @include margin(1.250em);
   flex: 1 1 auto;
   background-color: $pro-white;
@@ -24,6 +23,7 @@ $heading-grid: (
 
     span {
       opacity: 0.5;
+      user-select: none;
     }
 
     &--selected span {

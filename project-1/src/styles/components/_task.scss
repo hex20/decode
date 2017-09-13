@@ -40,12 +40,14 @@
   &__number,
   &__label {
     font-size: 0.813em;
+    user-select: none;
   }
 
   &__heading,
   &__title,
   &__date {
     margin: 0;
+    user-select: none;
   }
 
   &__heading {
